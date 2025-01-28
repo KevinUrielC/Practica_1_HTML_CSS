@@ -4,90 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Contacto</title>
-    <!-- Incluir Bootstrap CSS desde el archivo local -->
+    <!-- Incluir Bootstrap CSS y JS desde el archivo local -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Si tienes un archivo adicional de estilos personalizados -->
-    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Cambiar la tipografía a Arial -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+
+    <script>
+      // Función para resetear el formulario sin recargar la página
+      function resetFormulario(event) {
+        event.preventDefault(); // Prevenir el envío del formulario
+        document.getElementById("contactoForm").reset(); // Resetear los campos del formulario
+      }
+    </script>
   </head>
-  <body>
-    <div class="container mt-5">
-      <h1 class="text-center">Formulario de Contacto</h1>
+  <body class="bg-light">
 
-      <form action="#" method="POST" class="mt-4">
+    <!-- Barra de navegación -->
+    <nav class="navegacion">
+      <ul>
+          <li><a href="index.html">Acerca de mí</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="personaje.html">Personaje</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container" style="height: 80vh;">
+      <header>
+        <h1 class="text-center mb-4">Formulario de Contacto</h1>
+      </header>
+
+      <!-- Formulario con id para identificarlo -->
+      <form id="contactoForm" action="#" method="POST" onsubmit="resetFormulario(event)">
         <!-- Campo de correo -->
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="nombre@ejmplo.com"
-          />
+        <div class="mb-4">
+          <label for="correo" class="form-label">Correo electrónico: </label>
+          <input type="email" name="correo" id="correo" class="form-control" placeholder="nombre@ejemplo.com" required />
         </div>
-        <!-- Campo de textarea -->
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Example textarea</label
-          >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
+        <br>
 
-        <!-- Clasificación 1 -->
+        <!-- Campo de mensaje -->
+        <div class="mb-4">
+          <label for="mensaje" class="form-label">Mensaje: </label>
+          <br>
+          <textarea name="mensaje" id="mensaje" rows="5" cols="150" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        <br>
+
+        <!-- Clasificación -->
         <div class="mb-3">
-          <label for="clasificacion1" class="form-label"
-            >Clasificación 1:</label
-          >
-          <select
-            class="form-select"
-            id="clasificacion1"
-            name="clasificacion1"
-            required
-          >
-            <option value="contratacion">Contratación</option>
-            <option value="personal">Personal</option>
-            <option value="otro">Otro</option>
+          <label for="categoria" class="form-label">Categoría: </label>
+          <select class="form-select" name="categoria" id="categoria" required>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Personal">Personal</option>
+            <option value="Otro">Otro</option>
           </select>
         </div>
-
-        <!-- Clasificación 2 -->
-        <div class="mb-3">
-          <label for="clasificacion2" class="form-label"
-            >Clasificación 2:</label
-          >
-          <select
-            class="form-select"
-            id="clasificacion2"
-            name="clasificacion2"
-            required
-          >
-            <option value="contratacion">Contratación</option>
-            <option value="personal">Personal</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-
-        <!-- Clasificación 3 -->
-        <div class="mb-3">
-          <label for="clasificacion3" class="form-label"
-            >Clasificación 3:</label
-          >
-          <select
-            class="form-select"
-            id="clasificacion3"
-            name="clasificacion3"
-            required
-          >
-            <option value="contratacion">Contratación</option>
-            <option value="personal">Personal</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
+        <br>
 
         <!-- Botón para enviar -->
         <div class="text-center">
@@ -96,7 +74,10 @@
       </form>
     </div>
 
-    <!-- Incluir Bootstrap JS desde el archivo local -->
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+      <p class="mb-0">Archivo de contacto.</p>
+    </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
