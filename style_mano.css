@@ -7,11 +7,14 @@
 
 /* Estilo para el body */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #7b7a79;
   color: #333;
-  padding: 20px;
+  margin: 0; /* Elimina márgenes */
 }
 
 /* Estilo para el encabezado */
@@ -25,16 +28,17 @@ header {
 /* Estilo para la navegación */
 .navegacion {
   background-color: #333;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .navegacion ul {
   list-style-type: none;
+  display: flex; /* Uso de flexbox para control de alineación */
+  justify-content: flex-start; /* Alinear todo a la izquierda */
+  padding: 0;
 }
 
 .navegacion ul li {
-  display: inline-block;
   margin-right: 20px;
 }
 
@@ -48,13 +52,14 @@ header {
   text-decoration: underline;
 }
 
-
+/* H1 principal */
 h1 {
   font-size: 2em;
 }
 
 /* Estilo para la sección principal */
 section {
+  flex-grow: 1; /* Permite que la sección ocupe el espacio disponible */
   background-color: white;
   padding: 20px;
   margin-top: 20px;
@@ -67,13 +72,14 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Estilo para el contenedor de texto y la imagen */
+/* Estilo para el contenedor de texto y la imagen (solo para esos dos) */
 .contenido {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 
 /* Estilo para los párrafos de texto */
 .texto {
@@ -114,4 +120,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Estilo del footer */
+footer {
+  background-color: #9a6605;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }

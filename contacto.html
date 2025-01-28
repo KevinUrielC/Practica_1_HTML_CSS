@@ -5,15 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Contacto</title>
     <!-- Incluir Bootstrap CSS y JS desde el archivo local -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css" />
     
-    <!-- Cambiar la tipografía a Arial -->
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-    </style>
-
     <script>
       // Función para resetear el formulario sin recargar la página
       function resetFormulario(event) {
@@ -22,20 +15,45 @@
       }
     </script>
   </head>
-  <body class="bg-light">
+  <body class="bg-light d-flex flex-column min-vh-100">
 
     <!-- Barra de navegación -->
-    <nav class="navegacion">
-      <ul>
-          <li><a href="index.html">Acerca de mí</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="personaje.html">Personaje</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- Botón para colapsar la barra de navegación en pantallas pequeñas -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-3 active" href="index.html">Acerca de mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 active" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 active" href="personaje.html">Personaje</a>
+            </li>
+          </ul>
+          <span class="navbar-text ms-auto">Práctica 1. HTML y CSS</span>
+        </div>
+      </div>
     </nav>
+    
+
 
     <!-- Contenedor principal -->
-    <div class="container" style="height: 80vh;">
-      <header>
+    <div class="container flex-grow-1 mt-5">
+      <header class="text-center mb-4">
         <h1 class="text-center mb-4">Formulario de Contacto</h1>
       </header>
 
@@ -76,8 +94,8 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3">
-      <p class="mb-0">Archivo de contacto.</p>
+      <p class="mb-3">Archivo de contacto.</p>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="styles/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

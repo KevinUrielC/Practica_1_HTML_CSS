@@ -5,56 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acerca de mí</title>
     <!-- Incluir Bootstrap CSS y JS desde el archivo local -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css" />
   </head>
-  <body class="bg-light">
-
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
+        <!-- Marca (Inicio) -->
+        <!-- Botón colapsable -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Contenido de la barra -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Acerca de mí</a>
+              <a class="nav-link px-3 active" href="index.html">Acerca de mí</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link px-3 active" href="contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="personaje.html">Personaje</a>
+              <a class="nav-link px-3 active" href="personaje.html">Personaje</a>
             </li>
           </ul>
+          <!-- Texto adicional a la izquierda -->
+          <span class="navbar-text ms-0">Práctica 1. HTML y CSS</span>
         </div>
       </div>
     </nav>
+    
+    
 
-    <!-- Contenedor principal con márgenes a ambos lados -->
-    <div class="container mt-5 px-4">
+    <!-- Contenedor principal-->
+    <div class="container flex-grow-1 mt-5">
       <header class="text-center mb-4">
         <h1>Kevin Uriel Gaona Padilla</h1>
       </header>
 
       <section>
-        <h2>Introducción</h2>
-        <p style="text-align: justify; margin-right: 500px; ">
-          Hola mucho gusto, mi nombre es Kevin Uriel y actualmente me dedico a estudiar en la carrera de ingeniería en computación. 
+        <h2>Acerca de mí</h2>
+        <p>
+          Hola mucho gusto, mi nombre es Kevin Uriel, mi edad es de 22 años y actualmente me dedico a estudiar en la carrera de ingeniería en computación. 
           Algunos de mis gustos son la música (preferiblemente electrónica o Bass), los videojuegos y la programación, 
-          puede que no siempre tenga la mejor actitud frente a los demás pero eso es a que no soy muy abierto a socializar.
+          puede que no siempre tenga la mejor actitud frente a los demás pero eso de debe a que no soy muy abierto a socializar. Algunos de los lenguajes que me
+          gusta utilizar para programar son python, html, c y c++, en si no soy muy fan de java y javascript.
         </p>
-        <p style="text-align: justify; margin-right: 500px; ">
+        <p>
+          Algunos de mis videojuegos preferidos son la saga de Mega Man (saga clasica, x, zero y zx), Halo (todas sus entregas en general), 
+          Azure Striker Gunvolt (y todas sus otras entregas) y casi todos los bomberman. Aunque actualmente estoy intentando entrar al mundo de los juegos de pelea.
+        </p>
+        <p>
           En lo que llevo de carrera puedo decir que no siempre es fácil el poder mantener el ritmo frente a las distintas actividades 
           o proyectos que se me han presentado, pero aun así intento aprender lo necesario para realizar todo lo que venga. 
           Realmente no tengo demasiado que comentar sobre mí, por lo que lo iré dejando por aquí.
+        </p>
+        <p>
+          A continuación puedes explorar la página y probar las cosas implementadas.
         </p>
       </section>
     </div>
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3">
-      <p class="mb-0">Archivo index.</p>
+      <p class="mb-3">Archivo index.</p>
     </footer>
 
     <!-- Incluir Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="styles/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
